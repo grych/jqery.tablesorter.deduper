@@ -57,3 +57,4 @@ grych@tg.pl
 https://github.com/grych/dedup
 
 MIT License
+
