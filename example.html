@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.1/css/theme.default.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.1/js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.22.1/js/jquery.tablesorter.widgets.min.js"></script>
+
+  <script type="text/javascript" src="jquery.tablesorter.deduper.js"></script>
+
+  <style type="text/css">
+    .barely-visible {
+      color: rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  
+  <script type="text/javascript">
+    $(function() {
+      $("table").tablesorter({
+        theme: 'default',
+
+        widgets: ['zebra', 'deduper'],
+        widgetOptions : {
+          dupClass : 'barely-visible',
+          dupCompareFunction: function(x, y) { 
+            return x.toLowerCase() == y.toLowerCase(); 
+          }      
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<table id="myTable" class="tablesorter">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Due</th>
+      <th>Web Site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Smith</td>
+      <td>John</td>
+      <td>jsmith@gmail.com</td>
+      <td>$50.00</td>
+      <td>http://www.jsmith.com</td>
+    </tr>
+    <tr>
+      <td>Smith</td>
+      <td><b><i>John</i></b></td>
+      <td>jsmith@gmail.com</td>
+      <td>$50.00</td>
+      <td>http://www.jsmith.com</td>
+    </tr>
+    <tr>
+      <td>Smith</td>
+      <td>Frank</td>
+      <td>jsmith@gmail.com</td>
+      <td>$50.00</td>
+      <td>http://www.jsmith.com</td>
+    </tr>
+    <tr>
+      <td>Bach</td>
+      <td>Frank</td>
+      <td>fbach@yahoo.com</td>
+      <td>$50.00</td>
+      <td>http://www.frank.com</td>
+    </tr>
+    <tr>
+      <td>Doe</td>
+      <td>Tim</td>
+      <td>jdoe@hotmail.com</td>
+      <td>$100.00</td>
+      <td>http://www.jdoe.com</td>
+    </tr>
+    <tr>
+      <td>Conway</td>
+      <td>John</td>
+      <td>tconway@earthlink.net</td>
+      <td>$50.00</td>
+      <td>http://www.timconway.com</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
