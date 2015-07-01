@@ -54,7 +54,7 @@ DeDup is a Tablesorter widget to hide duplicated values in columns
 
 grych@tg.pl
 
-https://github.com/grych/dedup
+https://github.com/grych/jquery.tablesorter.deduper
 
 MIT License
 
